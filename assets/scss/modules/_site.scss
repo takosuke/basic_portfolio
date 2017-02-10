@@ -1,0 +1,133 @@
+/* =========================================
+		Site
+   ========================================= */
+
+ // break this shit up when done
+
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.site,
+.site__body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: sans-serif;
+}
+
+
+
+/* =========================================
+		Content
+   ========================================= */
+
+.content {
+	@media screen and #{$b_laptop} {
+	    overflow-x: scroll;
+//	    border: none;
+	    overflow-y: hidden;
+	    height: 100%;
+	    white-space:nowrap
+    }
+}
+
+/* =========================================
+		Post
+   ========================================= */
+
+.post {
+	padding: 80px 20px;
+//	border: 1px black solid;
+	@media screen and (min-width: 800px) {
+		vertical-align: top;
+		padding: 20px 100px;
+		height: 100vh;
+		display: inline-block;
+	}
+//	width: 800px;
+	&__header {
+//		border: 1px green solid;
+		&-title {
+			font-size: 1.4em;
+		}
+	}
+	&__content {
+//		border: 1px red solid;
+//		text-align: right;
+	}
+	&__footer {
+//		border: 1px blue solid;
+	}
+}
+
+/* =========================================
+		Image
+   ========================================= */
+
+img {
+	max-width: 80vw;
+	height: auto;
+	@media screen and (min-width: 800px) {
+		max-height: 80vh;
+		width: auto;
+	}
+
+}
+
+/* =========================================
+		Links
+   ========================================= */
+
+a {
+	color: $ca_link;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $ca_link_hover;
+}
+
+/* =========================================
+		Header
+   ========================================= */
+
+.header,
+.header__nav {
+}
+.header__nav  {
+}
+
+
+
+/* =========================================
+		Sidebar
+   ========================================= */
+
+.sidebar {
+//	border: 1px black solid;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	&__header {
+		font-size: 1.25em;
+	}
+
+	&__nav {
+
+		& ul {
+			padding-left: 25px;
+			font-size: 0.8em;
+		}
+	}
+
+	@media screen and #{$b_laptop} {
+		text-align: left;
+		width: 200px;
+		float: left;
+	}
+}
